@@ -673,150 +673,164 @@
             .gallery-strip { grid-template-columns:1fr; grid-template-rows:none; }
             .gallery-strip .g-item { height:220px; }
         }
-/* ===================== IMPROVED RESPONSIVENESS ===================== */
+/* ===================== GLOBAL FIX ===================== */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-/* Tablets */
-@media (max-width: 1024px) {
+/* ===================== TABLET + MOBILE ===================== */
+@media (max-width: 768px) {
+
+    /* HERO */
     .hero {
         grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 30px;
         text-align: center;
-        padding: 60px 30px;
-        gap: 40px;
     }
 
     .hero-text {
         align-items: center;
     }
 
+    .hero-text .main-title {
+        font-size: clamp(36px, 10vw, 56px);
+    }
+
+    .hero-photo {
+        margin-top: 10px;
+    }
+
     .profile-image {
-        width: 240px;
-        height: 240px;
+        width: 200px;
+        height: 200px;
     }
 
     .profile-ring {
-        width: 270px;
-        height: 270px;
+        width: 230px;
+        height: 230px;
     }
 
     .ripple {
-        width: 240px !important;
-        height: 240px !important;
+        transform: scale(0.6);
     }
 
+    /* ABOUT */
     .cards-three {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
+    .card {
+        padding: 24px;
+    }
+
+    /* GALLERY */
     .gallery-strip {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
     }
 
+    .gallery-strip .g-item {
+        height: 220px;
+    }
+
+    /* FUN SECTION */
     .fun-section {
         grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 20px 60px;
     }
 
+    .joke-card,
+    .food-joke-card {
+        padding: 24px;
+    }
+
+    /* MESSAGE */
     .message-section {
         grid-template-columns: 1fr;
-        text-align: center;
+        gap: 20px;
     }
 
     .message-label {
         writing-mode: horizontal-tb;
         transform: none;
-        font-size: 32px;
+        text-align: center;
+        font-size: 28px;
     }
 
-    .wishes-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-/* ===== FORCE FULL WIDTH ON MOBILE ===== */
-@media (max-width: 600px) {
-
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
+    .message-card {
+        padding: 28px;
     }
 
-    section,
-    .about-section,
-    .gallery-section,
-    .fun-section,
-    .message-section,
-    .countdown-section,
-    .wishes-section {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-    }
-
-    .candles-section {
-        width: 100%;
-        margin: 0;
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-
-    .countdown-section,
-    .message-section {
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-    }
-
-    .hero {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-    }
-}   
-
-/* ===================== FINAL MOBILE FIX (ABOUT SECTION) ===================== */
-
-/* Make cards fully responsive (fix missing/uneven layout) */
-.cards-three {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 28px;
-}
-
-/* Ensure section is visible and not overlapped */
-.about-section {
-    position: relative;
-    z-index: 2;
-}
-
-/* Fix spacing that got removed by forced full-width rules */
-@media (max-width: 600px) {
-
-    .about-section {
-        margin-top: 40px !important;
-        margin-bottom: 40px !important;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
-    }
-
-    /* Reduce big heading size for mobile */
-    .section-title {
-        font-size: 32px;
-        line-height: 1.2;
-    }
-
-    .section-subtitle {
+    .message-text {
         font-size: 18px;
     }
 
-    /* Make cards cleaner on small screens */
-    .card {
-        padding: 24px;
+    /* WISHES */
+    .wishes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================== SMALL MOBILE ===================== */
+@media (max-width: 480px) {
+
+    /* HERO TEXT */
+    .hero-text .main-title {
+        font-size: 32px;
+        line-height: 1.1;
     }
 
-    .card-title {
-        font-size: 22px;
+    .subtitle {
+        font-size: 16px;
+    }
+
+    /* PROFILE */
+    .profile-image {
+        width: 160px;
+        height: 160px;
+    }
+
+    .profile-ring {
+        width: 190px;
+        height: 190px;
+    }
+
+    /* CANDLES */
+    .candle-body {
+        width: 18px;
+        height: 45px;
+    }
+
+    .flame {
+        width: 12px;
+        height: 18px;
+    }
+
+    .candles-row {
+        gap: 10px;
+    }
+
+    /* COUNTDOWN */
+    .count-box {
+        padding: 14px 18px;
+        min-width: 70px;
+    }
+
+    .count-box .count-num {
+        font-size: 28px;
+    }
+
+    /* TEXT SIZE */
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
     }
 
     .card-text {
@@ -874,6 +888,10 @@
             <h3 class="card-title" style="color:#ec4899;">Math Genius 🧮</h3>
             <p class="card-text">Numbers are Ryan's best friends! He loves solving problems and making math look easy.</p>
         </div>
+        <div class="card card-mixed">
+            <h3 class="card-title" style="color:#9333ea;">Super Star ⭐</h3>
+            <p class="card-text">Smart, talented and amazing — Ryan makes everyone around him so incredibly proud every single day!</p>
+        </div>
     </div>
 </section>
 
@@ -902,7 +920,7 @@
             <p class="joke-reveal-line">
                 🎊 But we ALL know it's actually 🎉<br>
                 <span style="font-weight:900; color:#9333ea;">MATH</span> and
-                <span style="font-weight:900; color:#ec4899;">CODING!</span> 🎉💜
+                <span style="font-weight:900; color:#ec4899;">CODING!</span> 🎉🎊 😂💜
             </p>
         </div>
     </div>
@@ -911,10 +929,9 @@
         <h3 class="card-title" style="justify-content:center; color:#9333ea; font-size:28px;">The Daily Struggle! 🍕</h3>
         <p class="card-text">Whenever Ma'am asks:<br><strong>"Ryan, what do you want to eat today?"</strong></p>
         <span class="pata-nahi-text">"Pata nahi Auntie...<br>Pata nahi Ammi" 🤷‍♂️</span>
-        <p class="card-text">Every. Single. Time! 😂😂😂😂</p>
+        <p class="card-text">Every. Single. Time! 😂😂</p>
     </div>
 </div>
-
 
 <!-- ===== MESSAGE ===== -->
 <section class="message-section">
@@ -977,7 +994,7 @@
         </div>
         <div class="wish-card fade-up">
             <span class="wish-emoji">🎮</span>
-            <p class="wish-text">May you always find time for <strong>fun & laughter!</strong></p>
+            <p class="wish-text">May you always find time for <strong>fun, games & laughter!</strong></p>
         </div>
         <div class="wish-card fade-up">
             <span class="wish-emoji">💜</span>
@@ -988,7 +1005,7 @@
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer">
-    <p class="footer-title">Made with 💜 by Sana Khalid</p>
+    <p class="footer-title">Made with 💜 by Auntie Sana</p>
     <p class="footer-subtitle">💜 For the most amazing kid Ryan! 💫</p>
 </footer>
 

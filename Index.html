@@ -773,7 +773,56 @@
         max-width: 100%;
         margin: 0;
     }
-}     
+}   
+
+/* ===================== FINAL MOBILE FIX (ABOUT SECTION) ===================== */
+
+/* Make cards fully responsive (fix missing/uneven layout) */
+.cards-three {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 28px;
+}
+
+/* Ensure section is visible and not overlapped */
+.about-section {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fix spacing that got removed by forced full-width rules */
+@media (max-width: 600px) {
+
+    .about-section {
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Reduce big heading size for mobile */
+    .section-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .section-subtitle {
+        font-size: 18px;
+    }
+
+    /* Make cards cleaner on small screens */
+    .card {
+        padding: 24px;
+    }
+
+    .card-title {
+        font-size: 22px;
+    }
+
+    .card-text {
+        font-size: 16px;
+    }
+}
     </style>
 </head>
 <body>
@@ -862,9 +911,10 @@
         <h3 class="card-title" style="justify-content:center; color:#9333ea; font-size:28px;">The Daily Struggle! 🍕</h3>
         <p class="card-text">Whenever Ma'am asks:<br><strong>"Ryan, what do you want to eat today?"</strong></p>
         <span class="pata-nahi-text">"Pata nahi Auntie...<br>Pata nahi Ammi" 🤷‍♂️</span>
-        <p class="card-text">Every. Single. Time! 😂😂</p>
+        <p class="card-text">Every. Single. Time! 😂😂😂😂</p>
     </div>
 </div>
+
 
 <!-- ===== MESSAGE ===== -->
 <section class="message-section">

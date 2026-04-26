@@ -733,123 +733,47 @@
 }
 
 
-/* Mobile */
+/* ===== FORCE FULL WIDTH ON MOBILE ===== */
 @media (max-width: 600px) {
 
-    body {
+    html, body {
+        width: 100%;
         overflow-x: hidden;
     }
 
-    .hero {
-        padding: 40px 16px;
-        gap: 30px;
-    }
-
-    .main-title {
-        font-size: 42px !important;
-    }
-
-    .subtitle {
-        font-size: 16px;
-        text-align: center;
-    }
-
-    .profile-image {
-        width: 180px;
-        height: 180px;
-    }
-
-    .profile-ring {
-        width: 210px;
-        height: 210px;
-    }
-
-    .birthday-badge {
-        font-size: 12px;
-        padding: 6px 14px;
-    }
-
+    section,
     .about-section,
     .gallery-section,
+    .fun-section,
+    .message-section,
+    .countdown-section,
     .wishes-section {
-        padding: 40px 16px;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
     }
 
-    .cards-three {
-        grid-template-columns: 1fr;
+    .candles-section {
+        width: 100%;
+        margin: 0;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
-    .card {
-        padding: 24px;
+    .countdown-section,
+    .message-section {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
     }
 
-    .gallery-strip {
-        grid-template-columns: 1fr;
+    .hero {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
     }
-
-    .gallery-strip .g-item {
-        height: 200px;
-    }
-
-    .fun-section {
-        padding: 0 16px 40px;
-    }
-
-    .joke-card,
-    .food-joke-card {
-        padding: 24px;
-    }
-
-    .message-card {
-        padding: 28px;
-    }
-
-    .message-text {
-        font-size: 18px;
-    }
-
-    .big-age {
-        font-size: 64px !important;
-    }
-
-    .candles-row {
-        gap: 10px;
-    }
-
-    .candle-body {
-        height: 50px;
-        width: 18px;
-    }
-
-    .countdown-boxes {
-        gap: 10px;
-    }
-
-    .count-box {
-        padding: 14px 16px;
-        min-width: 70px;
-    }
-
-    .count-box .count-num {
-        font-size: 28px;
-    }
-
-    .wishes-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .wish-card {
-        padding: 24px;
-    }
-
-    .footer-title {
-        font-size: 20px;
-    }
-
-    .footer-subtitle {
-        font-size: 16px;
-    }
-}       
+}     
     </style>
 </head>
 <body>

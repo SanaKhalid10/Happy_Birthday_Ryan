@@ -673,6 +673,183 @@
             .gallery-strip { grid-template-columns:1fr; grid-template-rows:none; }
             .gallery-strip .g-item { height:220px; }
         }
+/* ===================== IMPROVED RESPONSIVENESS ===================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 60px 30px;
+        gap: 40px;
+    }
+
+    .hero-text {
+        align-items: center;
+    }
+
+    .profile-image {
+        width: 240px;
+        height: 240px;
+    }
+
+    .profile-ring {
+        width: 270px;
+        height: 270px;
+    }
+
+    .ripple {
+        width: 240px !important;
+        height: 240px !important;
+    }
+
+    .cards-three {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gallery-strip {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .fun-section {
+        grid-template-columns: 1fr;
+    }
+
+    .message-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .message-label {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 32px;
+    }
+
+    .wishes-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        padding: 40px 16px;
+        gap: 30px;
+    }
+
+    .main-title {
+        font-size: 42px !important;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .profile-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-ring {
+        width: 210px;
+        height: 210px;
+    }
+
+    .birthday-badge {
+        font-size: 12px;
+        padding: 6px 14px;
+    }
+
+    .about-section,
+    .gallery-section,
+    .wishes-section {
+        padding: 40px 16px;
+    }
+
+    .cards-three {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .gallery-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-strip .g-item {
+        height: 200px;
+    }
+
+    .fun-section {
+        padding: 0 16px 40px;
+    }
+
+    .joke-card,
+    .food-joke-card {
+        padding: 24px;
+    }
+
+    .message-card {
+        padding: 28px;
+    }
+
+    .message-text {
+        font-size: 18px;
+    }
+
+    .big-age {
+        font-size: 64px !important;
+    }
+
+    .candles-row {
+        gap: 10px;
+    }
+
+    .candle-body {
+        height: 50px;
+        width: 18px;
+    }
+
+    .countdown-boxes {
+        gap: 10px;
+    }
+
+    .count-box {
+        padding: 14px 16px;
+        min-width: 70px;
+    }
+
+    .count-box .count-num {
+        font-size: 28px;
+    }
+
+    .wishes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wish-card {
+        padding: 24px;
+    }
+
+    .footer-title {
+        font-size: 20px;
+    }
+
+    .footer-subtitle {
+        font-size: 16px;
+    }
+}       
     </style>
 </head>
 <body>
